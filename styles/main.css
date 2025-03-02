@@ -1,0 +1,134 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background-color: #e6e6e6; /* Light silver background */
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+}
+
+/* Email container for icon and address */
+.email-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Email icon styling */
+.email-icon {
+    width: 24px; /* Tiny but tappable size */
+    height: 24px;
+    cursor: pointer; /* Indicates tappability */
+}
+
+/* Email address styling */
+.email-address {
+    margin-left: 8px; /* Space between icon and text */
+    color: #333333; /* Dark painting chalk gray */
+    font-size: 16px;
+    text-decoration: none; /* No underline by default */
+    display: none; /* Hidden initially */
+}
+
+.email-address:hover {
+    text-decoration: underline; /* Underline on hover for tappable hint */
+}
+
+/* Container for centering content */
+.container {
+    text-align: center;
+    margin-top: 66px; /* Отступ сверху */
+}
+
+/* Text styling for h1 */
+h1 {
+    color: #c0c0c0; /* Chalk gray */
+    font-size: 48px; /* Default size for desktop */
+}
+
+/* New text container */
+.text-container {
+    max-width: 800px; /* Ограничим ширину для читаемости */
+    margin: 20px auto 0; /* 20px сверху от h1, центрируем по горизонтали */
+    padding: 15px; /* Внутренний отступ для текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Project item container */
+.project-item {
+    margin-bottom: 15px; /* Отступ между проектами */
+}
+
+/* Project title (link) */
+.project-title {
+    color: #333333; /* Dark painting chalk gray */
+    font-size: 18px; /* Меньше, чем h1 */
+    text-decoration: none; /* Без подчёркивания */
+    display: block; /* Чтобы дата шла ниже */
+}
+
+.project-title:hover {
+    text-decoration: underline; /* Подчёркивание при наведении */
+}
+
+/* Project date */
+.project-date {
+    color: #333333; /* Dark painting chalk gray */
+    font-size: 14px; /* Ещё меньше, чем title */
+    display: block; /* На новой строке */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px; /* Smaller size for mobile */
+    }
+    .email-address {
+        font-size: 14px; /* Slightly smaller on mobile */
+    }
+    .container {
+        margin-top: 50px; /* Уменьшаем отступ сверху */
+    }
+    .text-container {
+        max-width: 90%; /* Меньше отступов от краёв на мобильных */
+        margin: 15px auto 0; /* Чуть меньше отступ сверху */
+        padding: 10px; /* Чуть меньше внутренний отступ */
+    }
+    .project-title {
+        font-size: 16px; /* Чуть меньше */
+    }
+    .project-date {
+        font-size: 12px; /* Ещё меньше */
+    }
+}
+
+/* Extra small screens (e.g., very small phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    .email-address {
+        font-size: 12px; /* Even smaller for tiny screens */
+    }
+    .container {
+        margin-top: 30px; /* Ещё меньше отступ сверху */
+    }
+    .text-container {
+        max-width: 85%; /* Ещё меньше отступов от краёв */
+        margin: 10px auto 0; /* Минимальный отступ сверху */
+        padding: 8px; /* Минимальный внутренний отступ */
+    }
+    .project-title {
+        font-size: 14px; /* Ещё меньше */
+    }
+    .project-date {
+        font-size: 10px; /* Совсем мелкий */
+    }
+}
